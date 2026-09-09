@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
     public int hp = 100;
+    public float speed = 5.0f;
+    Rigidbody rb;
     // [SerializeField]
     // string playerName;
     // [SerializeField]
@@ -18,6 +21,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         // gameObject.GetComponent<Transform>().position = new Vector3(10, 10, 10);
         // GetComponent<Transform>().position = new Vector3(10, 10, 10);
         // transform.position = new Vector3(10, 10, 10); // 동일 코드
@@ -25,6 +29,28 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        float x = 0f;
+        float z = 0f;
+
+        if (Keyboard.current.wKey.isPressed)
+        {
+            x = 1f;
+        }
+        if (Keyboard.current.sKey.isPressed)
+        {
+            x = -1f;
+        }
+        if (Keyboard.current.aKey.isPressed)
+        {
+            z = 1f;
+        }
+        if (Keyboard.current.dKey.isPressed)
+        {
+            z = -1f;
+        }
+        Vector3 direction = new Vector3(x, 0f, z);
+        transform.position += direction * speed * Time.deltaTime;
+
         // sumTime += Time.deltaTime;
         // if (sumTime >= 1)
         // {
