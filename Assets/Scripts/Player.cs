@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Character
 {
-    public int hp = 100;
     // [SerializeField]
     // string playerName;
     // [SerializeField]

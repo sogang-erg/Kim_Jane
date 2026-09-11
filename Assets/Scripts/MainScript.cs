@@ -2,44 +2,22 @@ using UnityEngine;
 
 public class MainScript : MonoBehaviour
 {
-    public Mesh playerMesh; 
-    public Material playerMaterial; 
-    public GameObject player;
-    
+    // public GameObject prefab; // 프리팹 드래그앤드롭 연결 버전
+    Player player; // 인스턴스 변수 설정
+    Character target; // 더 상위 상속 활용
+
     void Start()
     {
-        player = CreatePlayer().gameObject; // gameObject 가져오기
-        player.transform.position = new Vector3(10, 10, 10);
-        player.GetComponent<Player>().hp = 0;
-        GameObject.Destroy(player, 3); // player Script 삭제
-        // GameObject.Destroy(player.gameObject, 5); // player 오브제 5초 뒤 삭제
-        // player.gameObject.SetActive(false); // 비활성화
-        // player.enabled = false; // player Script 비활성화
-    }
+        GameObject prefab = Resources.Load<GameObject>("Prefabs/Player"); // 로딩 버전
+        GameObject go = GameObject.Instantiate(prefab);
+        go.name = prefab.name; 
 
-    Player CreatePlayer()
-    {
-        GameObject go = new GameObject();
-        go.name = "Player";
-        go.tag = "Player";
+        player = go.GetComponent<Player>(); // player 참조값을 따라 player 관리
+        target = go.GetComponent<Player>(); // target 참조값을 따라 target 관리
 
-        MeshFilter meshFilter = go.AddComponent<MeshFilter>();
-        meshFilter.mesh = playerMesh;
-        MeshRenderer meshRenderer = go.AddComponent<MeshRenderer>();
-        meshRenderer.material = playerMaterial;
-        Player player = go.AddComponent<Player>();
-        player.hp = 200; // 다른 값으로 수정 가능
-        // return go;
-        return player;
     }
 
     void Update()
     {
-        // Debug.Log(Time.deltaTime);
-        if (player != null) // unity fake null = null이 아니라면 
-        { 
-            // player.hp--;
-            player.GetComponent<Player>().hp--; // GameObject용 ~Player script >> fake null 없이는 에러
-        }
     }
 }
