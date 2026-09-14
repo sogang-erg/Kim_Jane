@@ -8,12 +8,12 @@ public class MainScript : MonoBehaviour
 
     void Start()
     {
-        GameObject prefab = Resources.Load<GameObject>("Prefabs/Player"); // 로딩 버전
-        GameObject go = GameObject.Instantiate(prefab);
-        go.name = prefab.name; 
+    //     GameObject prefab = Resources.Load<GameObject>("Prefabs/Player"); // 로딩 버전
+    //     GameObject go = GameObject.Instantiate(prefab);
+    //     go.name = prefab.name; 
 
-        player = go.GetComponent<Player>(); // player 참조값을 따라 player 관리
-        target = go.GetComponent<Player>(); // target 참조값을 따라 target 관리
+    //     player = go.GetComponent<Player>(); // player 참조값을 따라 player 관리
+    //     target = go.GetComponent<Player>(); // target 참조값을 따라 target 관리
 
     }
 
