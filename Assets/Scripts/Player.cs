@@ -3,72 +3,22 @@ using UnityEngine.InputSystem; // InputSystem 사용
 
 public class Player : MonoBehaviour
 {
-    public int hp = 100;
-    public float speed = 5.0f; // 이동 속도
-
-    // [SerializeField]
-    // string playerName;
-    // [SerializeField]
-    // int health;
-    // [SerializeField]
-    // int attack;
-
-    // public string playerName = "Player";
-    // public int health = 100;
-    // public int attack = 10;
-    // float sumTime = 0;
-    // public Player target; 
+    private InputAction _testAction; 
 
     void Start()
     {
-        // gameObject.GetComponent<Transform>().position = new Vector3(10, 10, 10);
-        // GetComponent<Transform>().position = new Vector3(10, 10, 10);
-        // transform.position = new Vector3(10, 10, 10); // 동일 코드
+        _testAction = InputSystem.actions.FindAction("Player/Test"); // 액션 가져오기
+        _testAction.Enable(); // 활성화
     }
 
     void Update()
     {
-        float x = 0f; // 이동 방향 초기화
-        float z = 0f; // 이동 방향 초기화
-
-        if (Keyboard.current.wKey.isPressed)
+        Vector2 input = _testAction.ReadValue<Vector2>();
+        Vector3 dir = new Vector3(input.x, 0, input.y);
+        if (dir != Vector3.zero)
         {
-            x = 1f;
+            transform.rotation = Quaternion.LookRotation(dir);
         }
-        if (Keyboard.current.sKey.isPressed)
-        {
-            x = -1f;
-        }
-        if (Keyboard.current.aKey.isPressed)
-        {
-            z = 1f;
-        }
-        if (Keyboard.current.dKey.isPressed)
-        {
-            z = -1f;
-        }
-        Vector3 direction = new Vector3(x, 0f, z); // 이동 방향 벡터 생성
-        transform.position += direction * speed * Time.deltaTime; // 이동 처리
-
-        // sumTime += Time.deltaTime;
-        // if (sumTime >= 1)
-        // {
-        //     sumTime = 0;
-        //     // GenerateHP();
-        //     Attack();
-        // }
+        transform.position += dir * 5.0f * Time.deltaTime;
     }
-
-    // void GenerateHP()
-    // {
-    //     this.health++;
-    // }
-
-    //     void Attack()
-    // {
-    //     if (target != null)
-    //     {
-    //         target.health -= attack;
-    //     }
-    // }
 }
