@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        InputActionMap inputActionMap =InputSystem.actions.FindActionMap("Player"); // 액션맵 가져오기
+        inputActionMap.Disable(); // 액션맵 비활성화
+
         _testAction = InputSystem.actions.FindAction("Player/Test"); // 액션 가져오기
 
         if (_testAction == null)
@@ -16,37 +19,13 @@ public class Player : MonoBehaviour
         }
 
         _testAction.Enable(); // 활성화
-        Debug.Log("Test Action을 찾았습니다.");
 
-        _testAction.performed += OnPerformed; // 이벤트 방식으로 전달해 받음
-        _testAction.canceled += OnCancelled; // 이벤트 방식으로 전달해 받음
     }
 
-    void OnPerformed(InputAction.CallbackContext context)
-    { 
-        Debug.Log("Performed"); 
-    }
-
-    void OnCancelled(InputAction.CallbackContext context)
-    { 
-        Debug.Log("Cancelled"); 
-    }
-
-    void Update() // polling 방식
+    void Update()
     {
-        // if (_testAction.WasPerformedThisFrame()) // GetKeyDown에 해당
-        // {
-        //     Debug.Log("Performed");
-        // }
+        Vector2 move = _testAction.ReadValue<Vector2>(); // Vector2 정보 리턴
+        Debug.Log(move);
 
-        // if (_testAction.IsPressed()) // GetKey에 해당
-        // {
-        //     Debug.Log("Pressed");
-        // }
-
-        // if (_testAction.WasReleasedThisFrame()) // GetKeyUp에 해당
-        // {
-        //     Debug.Log("Released");
-        // }
     }
 }

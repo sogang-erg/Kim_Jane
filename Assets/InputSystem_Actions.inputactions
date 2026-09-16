@@ -98,12 +98,12 @@
                 },
                 {
                     "name": "Test",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "3d4fe22d-7edf-4f54-8eca-96ae347b389a",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "Hold",
-                    "initialStateCheck": false,
+                    "interactions": "",
+                    "initialStateCheck": true,
                     "priority": 0
                 }
             ],
@@ -494,15 +494,59 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "f4af731b-e435-4023-9403-639abbffa56d",
-                    "path": "<Keyboard>/space",
+                    "name": "WASD",
+                    "id": "2ab8b3b2-fa72-49db-84db-22d8b0b0b4c5",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Test",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "6de20324-f874-4459-bd45-2367b6c5d047",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Test",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "4dcce62e-3880-4d53-96b3-dc899ca2de3e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Test",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "2d9749b8-bdee-440f-be14-1db5d78d9571",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Test",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "f3176977-8f61-40ea-987d-3d94e7bc1db7",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Test",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
