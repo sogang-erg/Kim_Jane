@@ -33,7 +33,7 @@ public class MainScript : MonoBehaviour
         cube.transform.position = new Vector3(5, 1.5f, -2); // 위치 조정
         cube.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); // 크기 조정
         cube.GetComponent<MeshRenderer>().material = cubeMaterial;
-        cube.AddComponent<Cube>(); // Cube 스크립트 추가
+        // cube.AddComponent<Cube>(); // Cube 스크립트 추가
     }
 
     Player CreatePlayer()
