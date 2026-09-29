@@ -8,6 +8,12 @@ public class Player : MonoBehaviour
 
     private InputAction _testAction; 
 
+    [SerializeField] private int attackDamage = 10; // 공격력
+    [SerializeField] private float attackRange = 1.5f; // 공격 범위
+
+    private bool _hitMonster;
+    [SerializeField] private ParticleSystem hitEffect;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>(); 
@@ -25,7 +31,7 @@ public class Player : MonoBehaviour
         {
             transform.rotation = Quaternion.LookRotation(dir);
         }
-        transform.position += dir * 5.0f * Time.deltaTime;
+        transform.position += dir * 10f * Time.deltaTime;
 
         // 이동 여부에 따라 IDLE / MOVE 애니메이션 전환
         AnimatorStateInfo currentInfo = _animator.GetCurrentAnimatorStateInfo(0);
@@ -41,7 +47,47 @@ public class Player : MonoBehaviour
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             if (!isAttacking)
+            {
                 _animator.SetTrigger("attack");
+                Attack(); // 공격 실행
+            }
         }
+    }
+
+    void Attack()
+    {
+        _hitMonster = false;
+
+        Vector3 attackCenter = transform.position + transform.forward * attackRange;
+        Collider[] hits = Physics.OverlapSphere(attackCenter, attackRange);
+
+        foreach (Collider hit in hits)
+        {
+            Monster monster = hit.GetComponentInParent<Monster>();
+
+            if (monster != null)
+            {
+                monster.TakeDamage(attackDamage);
+                _hitMonster = true;
+                Debug.Log("Monster를 맞춤");
+                break;
+            }
+        }
+    }
+
+    public void PlayHitEffect()
+    {
+        Debug.Log($"Animation Event 실행 / _hitMonster = {_hitMonster}");
+
+        if (!_hitMonster)
+            return;
+
+        Debug.Log($"hitEffect = {hitEffect}");
+
+        hitEffect.Play();
+
+        Debug.Log("Hit Effect 재생");
+
+        _hitMonster = false;
     }
 }

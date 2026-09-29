@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI; // NavMeshAgent 사용을 위해 필요
 using System.Collections; // 코루틴 사용을 위해 필요
+using UnityEngine.UI; // Slider 사용을 위해 필요
 
 [RequireComponent(typeof(NavMeshAgent))]
 
@@ -8,7 +9,7 @@ public class Monster : MonoBehaviour
 {
     private Rigidbody _rb;
     Animator _animator;
-    [SerializeField] private float _detectionRadius = 10f; // 탐지 반경 설정
+    [SerializeField] private float _detectionRadius = 20f; // 탐지 반경 설정
     private Transform _player;
     private bool _isPlayerInDetectionArea = false;
 
@@ -25,10 +26,20 @@ public class Monster : MonoBehaviour
     // public Player target; // 플레이어를 추적하기 위한 변수
     // public float speed = 0.5f; // 몬스터 이동 속도
 
+    [SerializeField] private int maxHealth = 100; // 몬스터 최대 체력
+    [SerializeField] private Slider healthBar; // 체력바 UI
+    private int currentHealth; // 현재 체력
+    private bool _isDead;
+    [SerializeField] private ParticleSystem deathEffect;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>(); 
         _animator = GetComponent<Animator>();
+
+        currentHealth = maxHealth; // 초기 체력을 최대 체력으로 설정
+        healthBar.maxValue = maxHealth; // 체력바 UI 초기화
+        healthBar.value = currentHealth; // 체력바 UI 초기화
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
@@ -46,7 +57,7 @@ public class Monster : MonoBehaviour
 
     IEnumerator CoPerception() // 코루틴 버전으로 실행
     {
-        while (true)
+        while (!_isDead)
         {
             CheckPlayerInArea();
             yield return new WaitForSeconds(1f); // 1초마다 체크
@@ -55,7 +66,7 @@ public class Monster : MonoBehaviour
 
     IEnumerator CoLogic() // 코루틴 버전으로 실행
     {
-        while (true)
+        while (!_isDead)
         {
             switch (_state)
             {
@@ -98,10 +109,10 @@ public class Monster : MonoBehaviour
         float distance = Vector3.Distance(transform.position, _player.position);
         _isPlayerInDetectionArea = distance <= _detectionRadius;
 
-        if (_isPlayerInDetectionArea)
-        {
-            Debug.Log("플레이어가 탐지 반경 안에 있습니다.");
-        }
+        // if (_isPlayerInDetectionArea)
+        // {
+        //     Debug.Log("플레이어가 탐지 반경 안에 있습니다.");
+        // }
     }
 
     private void OnDrawGizmosSelected()
@@ -109,5 +120,95 @@ public class Monster : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, _detectionRadius);
 
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (_isDead) return;
+
+        currentHealth -= damage; // 체력 감소
+        currentHealth = Mathf.Max(currentHealth, 0);
+        healthBar.value = currentHealth; // 체력바 UI 업데이트
+        Debug.Log($"Monster가 {damage} 데미지를 받음. 현재 체력: {currentHealth}/{maxHealth}");
+        if (currentHealth <= 0)
+        {
+            Debug.Log("Monster 사망");
+            Die(); // 체력이 0 이하가 되면 사망 처리
+        }
+    }
+    private void Die()
+    {
+        _isDead = true;
+        _animator.SetBool("moving", false);
+        _animator.SetTrigger("dying");
+
+        if (_navMeshAgent != null && _navMeshAgent.isOnNavMesh)
+        {
+            _navMeshAgent.isStopped = true;
+            _navMeshAgent.ResetPath();
+        }
+
+        StartCoroutine(CoFinishDeath());
+    }
+
+    private IEnumerator CoFinishDeath()
+    {
+        while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("DYING"))
+        {
+            yield return null;
+        }
+
+        while (_animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)
+        {
+            yield return null;
+        }
+
+        gameObject.SetActive(false); // 몬스터 비활성화
+        GameManager gameManager = FindFirstObjectByType<GameManager>();
+        if (gameManager != null)
+        {
+            gameManager.EndGame();
+        }
+    }
+
+    public void ResetMonster()
+    {
+        _isDead = false;
+        currentHealth = maxHealth;
+        healthBar.value = currentHealth;
+        _animator.ResetTrigger("dying");
+        _animator.SetBool("moving", false);
+
+        _state = State.Idle;
+        _isPlayerInDetectionArea = false;
+
+        if (_player == null)
+        {
+            GameObject playerObj =
+                GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+            {
+                _player = playerObj.transform;
+            }
+        }
+
+        if (_navMeshAgent != null &&
+            _navMeshAgent.isOnNavMesh)
+        {
+            _navMeshAgent.ResetPath();
+            _navMeshAgent.isStopped = false;
+        }
+
+        gameObject.SetActive(true);
+        StartCoroutine(CoPerception());
+        StartCoroutine(CoLogic());
+    }
+
+    public void PlayDeathEffect()
+    {
+        if (deathEffect != null)
+        {
+            deathEffect.Play();
+        }
     }
 }
