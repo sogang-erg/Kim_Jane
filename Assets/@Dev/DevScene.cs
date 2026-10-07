@@ -10,15 +10,11 @@ public class DevScene : BaseScene
         base.Awake();
         SceneType = Define.EScene.DevScene;
         // TODO: 개발 씬 초기화 로직 작성
-        // GameObject playerPrefab = ResourceManager.Instance.Get<GameObject>("Player"); // 예시: "Player" 프리팹 가져오기
-        ResourceManager.Instance.instantiate("Player"); // 예시: "Player" 프리팹 인스턴스화
+        ResourceManager.Instance.LoadAll();
 
-        foreach (var item in DataManager.Instance.ItemDict.Values) // 아이템 데이터를 출력
-        {
-            Debug.Log($"Item TemplateID: {item.TemplateID}, NameTextID: {item.NameTextID}");
-        }
+        // UI
+        UIManager.Instance.ShowSceneUI<UI_DevScene>(); // 개발 씬 UI 표시, UI_DevScene이 프리팻화되어 있어야 함
 
-        // 게임 설정 데이터를 가져오기
-        Debug.Log(DataManager.Instance.GameConfig.InitialGold);
+
     }
 }

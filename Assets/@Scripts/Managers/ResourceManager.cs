@@ -5,7 +5,7 @@ public interface IResourceLoader
 {
     void LoadAll(Action<float> onProgress = null, Action onComplete = null); // 모든 리소스를 로드, 진행상태를 콜백으로 전달
     T Get<T>(string key) where T : UnityEngine.Object; // 키를 통해 리소스를 가져옴
-    GameObject instantiate(string key, Transform parent = null); // 인스턴스화
+    GameObject Instantiate(string key, Transform parent = null); // 인스턴스화
     void ReleaseAll();
 
 }
@@ -25,9 +25,9 @@ public class ResourceManager : Singleton<ResourceManager>
         return _loader.Get<T>(key);
     }
 
-    public GameObject instantiate(string key, Transform parent = null)
+    public GameObject Instantiate(string key, Transform parent = null)
     {
-        return _loader.instantiate(key, parent);
+        return _loader.Instantiate(key, parent);
     }
 
     public void ReleaseAll()
@@ -73,7 +73,7 @@ public class ResourcesLoader : IResourceLoader
         return null;
     }
 
-    public GameObject instantiate(string key, Transform parent = null)
+    public GameObject Instantiate(string key, Transform parent = null)
     {
         GameObject prefab = Get<GameObject>(key);
         if (prefab == null)
