@@ -88,5 +88,19 @@ public static class Utils
         return null;
     }
 
+    public static Transform GetRootTransform(ref Transform root, string name, Transform parent = null)
+    {
+        if (root == null)
+        {
+            GameObject go = GameObject.Find(name);
+            if (go == null)
+                go = new GameObject(name);
+
+            root = go.transform;
+            root.SetParent(parent);
+        }
+
+        return root;
+    }
 
 }

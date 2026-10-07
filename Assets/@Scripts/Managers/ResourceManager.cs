@@ -6,8 +6,8 @@ public interface IResourceLoader
     void LoadAll(Action<float> onProgress = null, Action onComplete = null); // 모든 리소스를 로드, 진행상태를 콜백으로 전달
     T Get<T>(string key) where T : UnityEngine.Object; // 키를 통해 리소스를 가져옴
     GameObject Instantiate(string key, Transform parent = null); // 인스턴스화
+    void Destroy(GameObject instance); // 인스턴스화된 오브젝트를 파괴
     void ReleaseAll();
-
 }
 
 public class ResourceManager : Singleton<ResourceManager>
@@ -33,6 +33,11 @@ public class ResourceManager : Singleton<ResourceManager>
     public void ReleaseAll()
     {
         _loader.ReleaseAll();
+    }
+ 
+    public void Destroy(GameObject go)
+    {
+        _loader.Destroy(go);
     }
 }
 
@@ -81,6 +86,13 @@ public class ResourcesLoader : IResourceLoader
         GameObject instance = GameObject.Instantiate(prefab, parent);
         instance.name = prefab.name;
         return instance;
+    }
+
+    public void Destroy(GameObject go)
+    {
+        if (go == null)
+            return;
+        UnityEngine.Object.Destroy(go);
     }
 
     public void ReleaseAll() // 모든 로드된 리소스를 해제-큰 게임에서나 발생

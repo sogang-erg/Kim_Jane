@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 7971012058043417766}
   - component: {fileID: 2100232371253857608}
   m_Layer: 5
-  m_Name: InfoButton
+  m_Name: ClickButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 6065450193665524418}
   - component: {fileID: 3291133108508817967}
   m_Layer: 5
-  m_Name: PlayerName
+  m_Name: GoldText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 5460303055152130933}
   - component: {fileID: 6010642683421201416}
   m_Layer: 5
-  m_Name: InfoButtonText
+  m_Name: ClickButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: CLICK ME!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

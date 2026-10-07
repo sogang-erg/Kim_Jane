@@ -9,21 +9,25 @@ public class UI_DevScene : UI_Scene
 
 {
     // 바인딩할 UI 요소의 열거형enum 정의
+    enum Buttons
+    {
+        ClickButton,
+    }
+
     enum Images
     {
         BG,
     }
 
-    enum Buttons
-    {
-        InfoButton,
-    }
-
     enum Texts
     {
-        PlayerName,
-        InfoButtonText,
+        GoldText,
+        ClickButtonText,
     }
+
+    // MVC
+    // Model대상-View갱신-Controller변화
+    // int Gold = 0; // 별도 매니저로 빼는 것이 정석
 
     // void Awake()
     protected override void Awake()
@@ -39,43 +43,33 @@ public class UI_DevScene : UI_Scene
         BindButtons(typeof(Buttons));
         BindTexts(typeof(Texts));
 
-        GetButton((int)Buttons.InfoButton).onClick.AddListener(() =>
-        {
-            // Debug.Log("InfoButton clicked");
-            // GetText((int)Texts.PlayerName).text = "Clicked!";
-            UIManager.Instance.ShowPopupUI<UI_InventoryPopup>();
-        });
+        GetButton((int)Buttons.ClickButton).onClick.AddListener(OnClickButton);
+
+        // GameManager.Instance.OnGoldChanged += RefreshUI; // 갱신하도록 구독
+        // GameManager.Instance.OnGoldChanged -= RefreshUI; // 중복 구독 방지
     }
 
-    // // 인스펙터에 표시되도록 설정 // 수동 드래그앤드롭
-    // [SerializeField]
-    // private Button _infoButton;
-    // [SerializeField] 
-    // private TMP_Text _infoButtonText;
-    // [SerializeField]
-    // private Image _backgroundImage; 
-    // [SerializeField] 
-    // private TMP_Text _playerNameText;
-
-    // public Button _infoButton;
-    // public TMP_Text _infoButtonText;
-    // public Image _backgroundImage; 
-    // public TMP_Text _playerNameText;
-
-    void Start()
+    private void OnEnable()
     {
-        // // 소스 코드를 통해 자식 오브젝트에서 컴포넌트를 찾아 할당 (코드 기반 할당)
-        // // _backgroundImage = Utils.FindChildGameObject(gameObject, "BG", true).GetComponent<Image>(); // 자식에 붙어있는 게임오브젝트 찾기
-        // _backgroundImage = Utils.FindChildComponent<Image>(gameObject, "BG", true); // 자식에 붙어있는 컴포넌트 찾기
-        // _infoButton = Utils.FindChildComponent<Button>(gameObject, "InfoButton", true); 
-        // _infoButtonText = Utils.FindChildComponent<TMP_Text>(gameObject, "InfoButtonText", true);
-        // _playerNameText = Utils.FindChildComponent<TMP_Text>(gameObject, "PlayerName", true);
-        
+        EventManager.Instance.AddEvent(Define.EEventType.GoldChanged, RefreshUI); // EventManager 활용
+        // GameManager.Instance.OnGoldChanged += RefreshUI; // 갱신하도록 구독
+    }
+    
+    private void OnDisable()
+    {
+        EventManager.Instance.RemoveEvent(Define.EEventType.GoldChanged, RefreshUI); // EventManager 활용
+        // GameManager.Instance.OnGoldChanged -= RefreshUI; // 구독 해제
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnClickButton() // 클릭 버튼 클릭 시 호출되는 함수-Controller
     {
-        
+        GameManager.Instance.Gold++;
+        RefreshUI();
+    }
+
+    public void RefreshUI() // UI를 갱신하는 함수-View
+    // public void RefreshUI(int value) // value는 변경된 Gold 값
+    {
+        GetText((int)Texts.GoldText).text = $"Gold: {GameManager.Instance.Gold}";
     }
 }

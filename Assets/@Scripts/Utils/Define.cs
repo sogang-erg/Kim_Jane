@@ -8,4 +8,11 @@ public static class Define
         LoadingScene,
         DevScene,
     }
+
+    public enum EEventType
+    {
+        None,
+        GoldChanged,
+        // player 죽음, HP 변경 등 추가 이벤트 가능
+    }
 }
