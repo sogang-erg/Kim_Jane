@@ -18,6 +18,8 @@ public class DataManager : Singleton<DataManager>
 
     public GameConfig GameConfig { get; private set; }
     public LocalizationConfig LocalizationConfig { get; private set; }
+    public AdsConfig AdsConfig { get; private set; }
+    public IAPConfig IAPConfig { get; private set; }
 
     public Dictionary<string, TextData> TextDict { get; private set; } = new Dictionary<string, TextData>();
     public Dictionary<int, ItemData> ItemDict { get; private set;  } = new Dictionary<int, ItemData>();
@@ -29,6 +31,8 @@ public class DataManager : Singleton<DataManager>
 
         TextDict = LoadJson<TextDataLoader, string, TextData>("TextData").MakeDict();
         ItemDict = LoadJson<ItemDataLoader, int, ItemData>("ItemData").MakeDict();
+        AdsConfig = LoadScriptableObject<AdsConfig>("AdsConfig");
+        IAPConfig = LoadScriptableObject<IAPConfig>("IAPConfig");
         // TODO
 
         Validate();

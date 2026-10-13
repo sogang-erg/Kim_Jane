@@ -15,21 +15,30 @@ public class DevScene : BaseScene
         ResourceManager.Instance.LoadAll();
         DataManager.Instance.LoadData();
 
-        SaveManager.Instance.Load();
-        SaveManager.Instance.StartAutoSave();
+        // AdsManager.Instance.Init();
+        // StartCoroutine(CoShowAds());
 
-        // // SoundManager.Instance.Play2D(Define.ESound.Bgm, "bgm");
-        // StartCoroutine(CoPlaySound());
-
+        IAPManager.Instance.Init();
+        StartCoroutine(CoBuyItem());
     }
 
-    // IEnumerator CoPlaySound()
+    // IEnumerator CoShowAds()
     // {
-
-    //     while (true)
+    //     yield return new WaitForSeconds(5);
+    //     AdsManager.Instance.ShowRewardedAds(() =>
     //     {
-    //         yield return new WaitForSeconds(5);
-    //         SoundManager.Instance.Play3D("explosion", gameObject, 1, 50);
-    //     }
+    //         Debug.Log("Rewarded ad completed.");
+    //         // TODO: 보상 지급 로직 작성
+    //     });
     // }
+
+    IEnumerator CoBuyItem()
+    {
+        yield return new WaitForSeconds(5);
+        IAPManager.Instance.Purchase("com.rookiss.s2.noads", () =>
+        {
+            Debug.Log("Purchase completed.");
+            // TODO: 보상 지급 로직 작성
+        });
+    }
 }
