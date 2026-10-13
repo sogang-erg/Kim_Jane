@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public static class Extension
 {
@@ -23,5 +24,17 @@ public static class Extension
         go.transform.DestroyChildren();
     }
 
+    // TMP_Text에 로컬라이즈된 텍스트를 설정하는 확장 메서드
+    public static void SetLocalizedText(this TMP_Text textComponent, string templateID)
+    {
+        if (textComponent == null)
+        {
+            Debug.LogWarning("Extension.GetText: TMP_Text is null.");
+            return;
+        }
+
+        textComponent.text = LocalizationManager.Instance.GetLocalizedText(templateID);
+        textComponent.font = LocalizationManager.Instance.CurrentFontAsset;
+    }
 
 }

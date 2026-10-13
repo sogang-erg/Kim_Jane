@@ -47,7 +47,7 @@ public class ResourcesLoader : IResourceLoader
 
     public void LoadAll(Action<float> onProgress = null, Action onComplete = null)
     {
-        List<string> paths = new List<string>{ "Prefabs", "Config", "Data/JasonData" }; // 로드할 리소스 경로 목록
+        List<string> paths = new List<string>{ "Prefabs", "Config", "Data/JsonData", "Sounds" }; // 로드할 리소스 경로 목록
         int totalPath = paths.Count;
         int loadedPath = 0;
 

@@ -1,15 +1,35 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
+
+[Serializable]
+public class GameData
+{
+    public int Gold;
+    public int Level;
+    public List<int> UpgradeCount;
+}
 
 public class GameManager : Singleton<GameManager>
 {
-    private int _gold = 0;
-    public int Gold
+    [SerializeField]
+    private GameData _gameData = new GameData();
+
+    public GameData GameData // 게임 데이터 클래스로 모아 관리
     {
-        get { return _gold; }
+        get { return _gameData; }
         set
         {
-            _gold = value;
+            _gameData = value;
+        }
+    }
+
+    public int Gold
+    {
+        get { return _gameData.Gold; }
+        set
+        {
+            _gameData.Gold = value;
             // 여기서 Gold 값이 변경될 때 추가적인 로직을 수행할 수 있음
             // if (OnGoldChanged != null) // 바뀌면 널리 널리 알리겠다
             //     OnGoldChanged.Invoke();

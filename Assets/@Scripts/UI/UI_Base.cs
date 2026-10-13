@@ -19,6 +19,25 @@ public class UI_Base : MonoBehaviour
         }
     }
 
+    protected virtual void Start()
+    {
+        RefreshUI();
+    }
+
+    protected virtual void OnEnable()
+    {
+        EventManager.Instance.AddEvent(Define.EEventType.LanguageChanged, RefreshUI);
+    }
+
+    protected virtual void OnDisable()
+    {
+        EventManager.Instance.RemoveEvent(Define.EEventType.LanguageChanged, RefreshUI);
+    }
+
+    public virtual void RefreshUI()
+    {
+    }
+
     protected void BindObjects(Type type) { Bind<GameObject>(type); }
     protected void BindImages(Type type) { Bind<Image>(type); }
     protected void BindTexts(Type type) { Bind<TMP_Text>(type); }

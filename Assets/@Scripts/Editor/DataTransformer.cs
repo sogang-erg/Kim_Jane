@@ -16,6 +16,7 @@ public class DataTransformer : EditorWindow
     {
         // TODO: 엑셀 데이터를 JSON으로 변환하는 로직 작성
         ParseExcelDataToJson<ItemDataLoader, ItemData>("Item");
+        ParseExcelDataToJson<TextDataLoader, TextData>("Text");
     }
 
     // private static void ParseExcelDataToJson<Loader, LoaderData>(string filename)
