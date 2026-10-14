@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private InputAction _testAction; 
 
     [SerializeField] private int attackDamage = 10; // 공격력
+    [SerializeField] private int attackIncreasePerLevel = 10; // 레벨업 시 공격력 증가량
     [SerializeField] private float attackRange = 1.5f; // 공격 범위
 
     private bool _hitMonster;
@@ -22,6 +23,13 @@ public class Player : MonoBehaviour
     private bool _isDead;
 
     private Transform _cam;
+
+    [SerializeField] private float footstepInterval = 2f;
+    private float _footstepTimer;
+
+    public int Level => GameManager.Instance.GameData.Level;
+    private int CurrentExp => GameManager.Instance.GameData.EXP;
+    [SerializeField] private int expToNextLevel = 100;
 
     void Start()
     {
@@ -62,6 +70,8 @@ public class Player : MonoBehaviour
     {
         if (_isDead) return;
 
+        SoundManager.Instance.Play2D(Define.ESound.Effect, "hit1");
+
         _hp = Mathf.Max(_hp - damage, 0);
 
         if (healthBar != null)
@@ -88,6 +98,22 @@ public class Player : MonoBehaviour
         }
         transform.position += dir * 10f * Time.deltaTime;
 
+        // 이동 중 발소리 재생
+
+        if (dir != Vector3.zero)
+        {
+            _footstepTimer += Time.deltaTime;
+            if (_footstepTimer >= footstepInterval)
+            {
+                SoundManager.Instance.Play2D(Define.ESound.Foot, "run");
+                _footstepTimer = 0f;
+            }
+        }
+        else
+        {
+            _footstepTimer = 0f;
+        }
+
         // 이동 여부에 따라 IDLE / MOVE 애니메이션 전환
         AnimatorStateInfo currentInfo = _animator.GetCurrentAnimatorStateInfo(0);
         bool isAttacking = currentInfo.IsName("ATTACK") && currentInfo.normalizedTime < 1f;
@@ -105,6 +131,8 @@ public class Player : MonoBehaviour
             if (!isAttacking)
             {
                 _animator.SetTrigger("attack");
+                SoundManager.Instance.SetSoundVolume(Define.ESound.Attack, 0.8f);
+                SoundManager.Instance.Play2D(Define.ESound.Attack, "attack1");
                 Attack(); // 공격 실행
             }
         }
@@ -145,5 +173,36 @@ public class Player : MonoBehaviour
         Debug.Log("Hit Effect 재생");
 
         _hitMonster = false;
+    }
+
+    public void AddExp(int amount)
+    {
+        GameManager.Instance.GameData.EXP += amount;
+        Debug.Log($"경험치 획득: {amount}, 현재 경험치: {GameManager.Instance.GameData.EXP}");
+
+        while (GameManager.Instance.GameData.EXP >= expToNextLevel)
+        {
+            GameManager.Instance.GameData.EXP -= expToNextLevel;
+            LevelUp();
+        }
+    }
+
+    private void LevelUp()
+    {
+        GameManager.Instance.GameData.Level++;
+
+        // 레벨 업 시 공격력 증가
+        attackDamage += attackIncreasePerLevel;
+        
+        Debug.Log($"레벨 업! 현재 레벨: {GameManager.Instance.GameData.Level}");
+        Debug.Log($"현재 공격력: {attackDamage  }");
+
+        // 레벨업 사운드 재생
+        SoundManager.Instance.Play2D(Define.ESound.Effect, "level");
+
+        // UI 갱신
+        UI_DevScene ui = FindFirstObjectByType<UI_DevScene>();
+        if (ui != null)
+            ui.UpdateLevelText(GameManager.Instance.GameData.Level);
     }
 }

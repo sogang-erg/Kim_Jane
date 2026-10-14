@@ -25,11 +25,17 @@ public class Inventory_Popup : UI_Popup
 
         GetButton((int)Buttons.IheartButton).onClick.AddListener(() =>
         {
+            SoundManager.Instance.SetSoundVolume(Define.ESound.Effect, 0.5f);
+            SoundManager.Instance.Play2D(Define.ESound.Effect, "heal");
             FindFirstObjectByType<Player>()?.Heal(10);
         });
 
         // Image는 클릭 이벤트가 없어서 Button을 붙여 사용
         Button outButton = Utils.GetOrAddComponent<Button>(GetImage((int)Images.ImageOut).gameObject);
-        outButton.onClick.AddListener(() => UIManager.Instance.ClosePopupUI());
+        outButton.onClick.AddListener(() => 
+        {
+            SoundManager.Instance.Play2D(Define.ESound.Effect, "button");
+            UIManager.Instance.ClosePopupUI();
+        });
     }   
 }

@@ -5840,6 +5840,7 @@ MonoBehaviour:
   gameStart: {fileID: 6473890705655166962, guid: 4939f1e3d6c2249d19c36189d2943cd1, type: 3}
   gameEnd: {fileID: 3135483194195140140, guid: 90604203b23e34073ad22f235441dccc, type: 3}
   gameOver: {fileID: 9177252378643691839, guid: 71622fd8315de457fa212bfc6f89ae5d, type: 3}
+  congrats: {fileID: 7010517005667264904, guid: 52a801a3d6b234821acc5e6b5c3064bd, type: 3}
   player: {fileID: 1739059040}
   confetti: {fileID: 586461084}
   spawnPoints:
@@ -5847,6 +5848,10 @@ MonoBehaviour:
   - {fileID: 1758852736}
   - {fileID: 1120714785}
   zombieCount: 3
+  _gameData:
+    EXP: 0
+    Level: 0
+    UpgradeCount: 
 --- !u!4 &762398799
 Transform:
   m_ObjectHideFlags: 0

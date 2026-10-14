@@ -166,6 +166,9 @@ public class Zombie : Creature
     {
         if (_isDead) return;
 
+        SoundManager.Instance.SetSoundVolume(Define.ESound.Effect, 0.5f);
+        SoundManager.Instance.Play2D(Define.ESound.Effect, "hit");
+
         _hp = Mathf.Max(_hp - damage, 0);
 
         if (healthBar != null)
@@ -178,6 +181,15 @@ public class Zombie : Creature
     private void Die()
     {
         _isDead = true;
+
+        // 플레이어에게 경험치 지급
+        if (_player != null)
+        _player.AddExp(10);
+
+        // 좀비 사망 사운드 재생
+        SoundManager.Instance.SetSoundVolume(Define.ESound.Die, 0.8f);
+        SoundManager.Instance.Play2D(Define.ESound.Die, "die");
+
         _animator.SetBool("moving", false);
 
         _animator.ResetTrigger("attack");

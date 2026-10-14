@@ -28,8 +28,8 @@ public class SceneManager : Singleton<SceneManager>
         string sceneName = sceneType.ToString();
         // 씨 전환 시 풀에 남은 오브젝트는 파괴되므로 풀을 비움
         PoolManager.Instance.Clear();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
         _currentScene = null; // 씬을 로드한 후 현재 씬 참조 초기화
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
     public void LoadNextScene()
@@ -42,5 +42,10 @@ public class SceneManager : Singleton<SceneManager>
         }
 
         LoadScene(next);
+    }
+
+    public bool IsLastStage()
+    {
+        return CurrentSceneType == Define.EScene.Stage3;
     }
 }

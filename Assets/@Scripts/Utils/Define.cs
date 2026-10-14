@@ -9,4 +9,20 @@ public static class Define
         Stage2,
         Stage3,
     }
+
+    public enum ESound
+    {
+        Bgm,
+        Attack,
+        Effect,
+        Foot,
+        Die,
+        Button,
+        MaxCount,
+    }
+
+    public enum EEvent
+    {
+        Level,
+    }
 }
