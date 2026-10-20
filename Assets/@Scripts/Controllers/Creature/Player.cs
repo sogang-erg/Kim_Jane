@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     private int CurrentExp => GameManager.Instance.GameData.EXP;
     [SerializeField] private int expToNextLevel = 100;
 
+    [SerializeField] private MagicShield _magicShield;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>(); 
@@ -69,6 +71,10 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (_isDead) return;
+
+        // 쉴드 활성화 중이면 데미지를 받지 않음
+        if (_magicShield != null && _magicShield.IsActive)
+            return;
 
         SoundManager.Instance.Play2D(Define.ESound.Effect, "hit1");
 

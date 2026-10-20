@@ -825,6 +825,11 @@ MonoBehaviour:
   healthBar: {fileID: 424304275211053998}
   detectionRadius: 10
   deathEffect: {fileID: 6099194109008791728}
+  attackRange: 0.4
+  stopDistance: 1
+  attackCooldown: 0
+  attackDamage: 30
+  hitDelay: 0.8
 --- !u!1 &6819909411542250741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,7 +1044,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a2d2ef3c3fdf4407a76dca17193d1be, type: 2}
+  - {fileID: 2100000, guid: debeef7edcecf437cb7e53cc9533e99d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
