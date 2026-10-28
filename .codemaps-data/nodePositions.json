@@ -1,0 +1,1674 @@
+{
+  "class_group_GameManager": {
+    "x": 0,
+    "y": 0
+  },
+  "class_group_Zombie": {
+    "x": 860,
+    "y": 0
+  },
+  "class_group_Zombie1": {
+    "x": 1720,
+    "y": 0
+  },
+  "class_group_Zombie2": {
+    "x": 2580,
+    "y": 0
+  },
+  "class_group_Monster": {
+    "x": 3440,
+    "y": 0
+  },
+  "class_group_Player": {
+    "x": 4300,
+    "y": 0
+  },
+  "class_group_UI_DevScene": {
+    "x": 5160,
+    "y": 0
+  },
+  "class_group_SoundManager": {
+    "x": 6020,
+    "y": 0
+  },
+  "class_group_SaveManager": {
+    "x": 6880,
+    "y": 0
+  },
+  "class_group_PoolManager": {
+    "x": 7740,
+    "y": 0
+  },
+  "class_group_MagicShield": {
+    "x": 8600,
+    "y": 0
+  },
+  "class_group_ObjectManager": {
+    "x": 9110,
+    "y": 0
+  },
+  "class_group_Inventory_Popup": {
+    "x": 9620,
+    "y": 0
+  },
+  "class_group_Pool": {
+    "x": 10130,
+    "y": 0
+  },
+  "class_group_UI_Base": {
+    "x": 10990,
+    "y": 0
+  },
+  "class_group_DataManager": {
+    "x": 11500,
+    "y": 0
+  },
+  "class_group_ResourceManager": {
+    "x": 12360,
+    "y": 0
+  },
+  "class_group_ResourcesLoader": {
+    "x": 12870,
+    "y": 0
+  },
+  "class_group_Creature": {
+    "x": 13380,
+    "y": 0
+  },
+  "class_group_SceneManager": {
+    "x": 14240,
+    "y": 0
+  },
+  "class_group_SaveManagerEditor": {
+    "x": 14750,
+    "y": 0
+  },
+  "class_group_Utils": {
+    "x": 5584.678663239076,
+    "y": 2121.0025706940874
+  },
+  "class_group_Stage1": {
+    "x": 153.45606680696483,
+    "y": 2159.823714556491
+  },
+  "class_group_Stage2": {
+    "x": 966.8353676229749,
+    "y": 2147.0535980258255
+  },
+  "class_group_Stage3": {
+    "x": 1818.9835055364672,
+    "y": 2139.9808085022614
+  },
+  "class_group_FollowCamera": {
+    "x": 7510.025706940875,
+    "y": 2101.0025706940874
+  },
+  "class_group_HealthBarBillboard": {
+    "x": 8830.61731970297,
+    "y": 2068.525290307779
+  },
+  "class_group_ObjectBase": {
+    "x": 6398.688946015424,
+    "y": 2120.668380462725
+  },
+  "class_group_BaseScene": {
+    "x": 2773.6131607527354,
+    "y": 2150.59638995352
+  },
+  "class_group_UI_Popup": {
+    "x": 4734.241536535819,
+    "y": 2139.6666206107193
+  },
+  "class_group_UI_Scene": {
+    "x": 3758.236418803094,
+    "y": 2159.817317390578
+  },
+  "GameManager_StartGame_group": {
+    "x": 20,
+    "y": 40
+  },
+  "GameManager_OnPlayerDied_group": {
+    "x": 20,
+    "y": 470
+  },
+  "GameManager_GoToNextStage_group": {
+    "x": 20,
+    "y": 660
+  },
+  "GameManager_GoToStart_group": {
+    "x": 20,
+    "y": 890
+  },
+  "GameManager_EndGame_group": {
+    "x": 20,
+    "y": 1080
+  },
+  "GameManager_OnZombieDied_group": {
+    "x": 20,
+    "y": 1310
+  },
+  "GameManager_SpawnZombieByIndex_group": {
+    "x": 320,
+    "y": 40
+  },
+  "GameManager_ShowEndUI_group": {
+    "x": 320,
+    "y": 270
+  },
+  "GameManager_ResetGame_group": {
+    "x": 320,
+    "y": 500
+  },
+  "GameManager_Start_group": {
+    "x": 320,
+    "y": 810
+  },
+  "GameManager_Awake_group": {
+    "x": 320,
+    "y": 920
+  },
+  "Zombie_PlayDeathEffect_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Zombie_init_group": {
+    "x": 20,
+    "y": 150
+  },
+  "Zombie_TakeDamage_group": {
+    "x": 20,
+    "y": 260
+  },
+  "Zombie_Awake_group": {
+    "x": 20,
+    "y": 490
+  },
+  "Zombie_OnEnable_group": {
+    "x": 320,
+    "y": 40
+  },
+  "Zombie_CoChase_group": {
+    "x": 320,
+    "y": 190
+  },
+  "Zombie_CoDealDamage_group": {
+    "x": 320,
+    "y": 380
+  },
+  "Zombie_FaceTarget_group": {
+    "x": 320,
+    "y": 530
+  },
+  "Zombie_Die_group": {
+    "x": 320,
+    "y": 640
+  },
+  "Zombie_CoFinishDeath_group": {
+    "x": 320,
+    "y": 910
+  },
+  "Zombie1_PlayDeathEffect_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Zombie1_init_group": {
+    "x": 20,
+    "y": 150
+  },
+  "Zombie1_TakeDamage_group": {
+    "x": 20,
+    "y": 260
+  },
+  "Zombie1_Awake_group": {
+    "x": 20,
+    "y": 490
+  },
+  "Zombie1_OnEnable_group": {
+    "x": 320,
+    "y": 40
+  },
+  "Zombie1_CoChase_group": {
+    "x": 320,
+    "y": 190
+  },
+  "Zombie1_CoDealDamage_group": {
+    "x": 320,
+    "y": 380
+  },
+  "Zombie1_FaceTarget_group": {
+    "x": 320,
+    "y": 530
+  },
+  "Zombie1_Die_group": {
+    "x": 320,
+    "y": 640
+  },
+  "Zombie1_CoFinishDeath_group": {
+    "x": 320,
+    "y": 910
+  },
+  "Zombie2_PlayDeathEffect_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Zombie2_init_group": {
+    "x": 20,
+    "y": 150
+  },
+  "Zombie2_TakeDamage_group": {
+    "x": 20,
+    "y": 260
+  },
+  "Zombie2_Awake_group": {
+    "x": 20,
+    "y": 490
+  },
+  "Zombie2_OnEnable_group": {
+    "x": 320,
+    "y": 40
+  },
+  "Zombie2_CoChase_group": {
+    "x": 320,
+    "y": 190
+  },
+  "Zombie2_CoDealDamage_group": {
+    "x": 320,
+    "y": 380
+  },
+  "Zombie2_FaceTarget_group": {
+    "x": 320,
+    "y": 530
+  },
+  "Zombie2_Die_group": {
+    "x": 320,
+    "y": 640
+  },
+  "Zombie2_CoFinishDeath_group": {
+    "x": 320,
+    "y": 910
+  },
+  "Monster_ResetMonster_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Monster_PlayDeathEffect_group": {
+    "x": 20,
+    "y": 150
+  },
+  "Monster_TakeDamage_group": {
+    "x": 20,
+    "y": 260
+  },
+  "Monster_CheckPlayerInArea_group": {
+    "x": 320,
+    "y": 40
+  },
+  "Monster_OnDrawGizmosSelected_group": {
+    "x": 320,
+    "y": 150
+  },
+  "Monster_Start_group": {
+    "x": 320,
+    "y": 260
+  },
+  "Monster_Die_group": {
+    "x": 320,
+    "y": 370
+  },
+  "Monster_CoFinishDeath_group": {
+    "x": 320,
+    "y": 520
+  },
+  "Player_PlayHitEffect_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Player_Heal_group": {
+    "x": 20,
+    "y": 150
+  },
+  "Player_ResetHealth_group": {
+    "x": 20,
+    "y": 260
+  },
+  "Player_AddExp_group": {
+    "x": 20,
+    "y": 370
+  },
+  "Player_TakeDamage_group": {
+    "x": 20,
+    "y": 520
+  },
+  "Player_Attack_group": {
+    "x": 320,
+    "y": 40
+  },
+  "Player_LevelUp_group": {
+    "x": 320,
+    "y": 190
+  },
+  "Player_Update_group": {
+    "x": 320,
+    "y": 380
+  },
+  "Player_Start_group": {
+    "x": 320,
+    "y": 650
+  },
+  "UI_DevScene_UpdateLevelText_group": {
+    "x": 20,
+    "y": 40
+  },
+  "UI_DevScene_Awake_group": {
+    "x": 320,
+    "y": 40
+  },
+  "SoundManager_IsBgmPlaying_group": {
+    "x": 20,
+    "y": 40
+  },
+  "SoundManager_StopOver_group": {
+    "x": 20,
+    "y": 150
+  },
+  "SoundManager_Play3D_group": {
+    "x": 20,
+    "y": 450
+  },
+  "SoundManager_StopBgm_group": {
+    "x": 20,
+    "y": 600
+  },
+  "SoundManager_Clear_group": {
+    "x": 20,
+    "y": 750
+  },
+  "SoundManager_Stop_group": {
+    "x": 20,
+    "y": 900
+  },
+  "SoundManager_SetSoundVolume_group": {
+    "x": 20,
+    "y": 1010
+  },
+  "SoundManager_Play2D_group": {
+    "x": 20,
+    "y": 1310
+  },
+  "SoundManager_GetAudioClip_group": {
+    "x": 320,
+    "y": 40
+  },
+  "SaveManager_StartAutoSave_group": {
+    "x": 20,
+    "y": 40
+  },
+  "SaveManager_Load_group": {
+    "x": 20,
+    "y": 230
+  },
+  "SaveManager_Reset_group": {
+    "x": 20,
+    "y": 380
+  },
+  "SaveManager_StopAutoSave_group": {
+    "x": 20,
+    "y": 570
+  },
+  "SaveManager_Delete_group": {
+    "x": 20,
+    "y": 680
+  },
+  "SaveManager_Save_group": {
+    "x": 20,
+    "y": 790
+  },
+  "SaveManager_CoAutoSave_group": {
+    "x": 320,
+    "y": 40
+  },
+  "SaveManager_GameData_group": {
+    "x": 320,
+    "y": 190
+  },
+  "PoolManager_Reserve_group": {
+    "x": 20,
+    "y": 190
+  },
+  "PoolManager_Push_group": {
+    "x": 20,
+    "y": 340
+  },
+  "PoolManager_Pop_group": {
+    "x": 20,
+    "y": 600
+  },
+  "PoolManager_Clear_group": {
+    "x": 20,
+    "y": 750
+  },
+  "PoolManager_CreatePool_group": {
+    "x": 320,
+    "y": 40
+  },
+  "MagicShield_PlayShield_group": {
+    "x": 20,
+    "y": 40
+  },
+  "MagicShield_Update_group": {
+    "x": 20,
+    "y": 230
+  },
+  "MagicShield_AnimateShield_group": {
+    "x": 20,
+    "y": 460
+  },
+  "MagicShield_Awake_group": {
+    "x": 20,
+    "y": 570
+  },
+  "ObjectManager_SpawnZombie_group": {
+    "x": 20,
+    "y": 40
+  },
+  "ObjectManager_SpawnZombie1_group": {
+    "x": 20,
+    "y": 150
+  },
+  "ObjectManager_SpawnZombie2_group": {
+    "x": 20,
+    "y": 260
+  },
+  "ObjectManager_Despawn_group": {
+    "x": 20,
+    "y": 370
+  },
+  "Inventory_Popup_Awake_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Pool_Push_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Pool_Pop_group": {
+    "x": 20,
+    "y": 150
+  },
+  "Pool_OnCreate_group": {
+    "x": 320,
+    "y": 40
+  },
+  "Pool_OnGet_group": {
+    "x": 320,
+    "y": 150
+  },
+  "Pool_OnRelease_group": {
+    "x": 320,
+    "y": 260
+  },
+  "Pool_OnDestroy_group": {
+    "x": 320,
+    "y": 370
+  },
+  "UI_Base_BindObjects_group": {
+    "x": 20,
+    "y": 40
+  },
+  "UI_Base_GetObject_group": {
+    "x": 20,
+    "y": 150
+  },
+  "UI_Base_BindTexts_group": {
+    "x": 20,
+    "y": 260
+  },
+  "UI_Base_GetImage_group": {
+    "x": 20,
+    "y": 370
+  },
+  "UI_Base_BindImages_group": {
+    "x": 20,
+    "y": 480
+  },
+  "UI_Base_BindButtons_group": {
+    "x": 20,
+    "y": 590
+  },
+  "UI_Base_GetText_group": {
+    "x": 20,
+    "y": 700
+  },
+  "UI_Base_GetButton_group": {
+    "x": 20,
+    "y": 810
+  },
+  "UI_Base_Awake_group": {
+    "x": 20,
+    "y": 920
+  },
+  "DataManager_LoadData_group": {
+    "x": 20,
+    "y": 40
+  },
+  "DataManager_Validate_group": {
+    "x": 320,
+    "y": 40
+  },
+  "ResourceManager_Destroy_group": {
+    "x": 20,
+    "y": 40
+  },
+  "ResourceManager_ReleaseAll_group": {
+    "x": 20,
+    "y": 150
+  },
+  "ResourceManager_Instantiate_group": {
+    "x": 20,
+    "y": 260
+  },
+  "ResourceManager_LoadAll_group": {
+    "x": 20,
+    "y": 370
+  },
+  "ResourcesLoader_Destroy_group": {
+    "x": 20,
+    "y": 40
+  },
+  "ResourcesLoader_Instantiate_group": {
+    "x": 20,
+    "y": 150
+  },
+  "ResourcesLoader_LoadAll_group": {
+    "x": 20,
+    "y": 260
+  },
+  "Creature_Place_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Creature_TakeDamage_group": {
+    "x": 20,
+    "y": 150
+  },
+  "Creature_Update_group": {
+    "x": 320,
+    "y": 40
+  },
+  "Creature_Start_group": {
+    "x": 320,
+    "y": 150
+  },
+  "SceneManager_LoadNextScene_group": {
+    "x": 20,
+    "y": 40
+  },
+  "SceneManager_IsLastStage_group": {
+    "x": 20,
+    "y": 150
+  },
+  "SaveManagerEditor_DeleteSaveFile_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Utils_FindChildGameObject_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Utils_GetRootTransform_group": {
+    "x": 20,
+    "y": 150
+  },
+  "Stage1_Awake_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Stage2_Awake_group": {
+    "x": 20,
+    "y": 40
+  },
+  "Stage3_Awake_group": {
+    "x": 20,
+    "y": 40
+  },
+  "FollowCamera_LateUpdate_group": {
+    "x": 20,
+    "y": 40
+  },
+  "HealthBarBillboard_LateUpdate_group": {
+    "x": 20,
+    "y": 40
+  },
+  "HealthBarBillboard_Start_group": {
+    "x": 20,
+    "y": 150
+  },
+  "ObjectBase_Awake_group": {
+    "x": 20,
+    "y": 40
+  },
+  "BaseScene_Awake_group": {
+    "x": 20,
+    "y": 40
+  },
+  "UI_Popup_Awake_group": {
+    "x": 20,
+    "y": 40
+  },
+  "UI_Scene_Awake_group": {
+    "x": 20,
+    "y": 40
+  },
+  "invoke_GameManager_StartGame_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_GameManager_OnPlayerDied_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_GameManager_GoToNextStage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_GameManager_GoToStart_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_GameManager_EndGame_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_GameManager_OnZombieDied_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_GameManager_SpawnZombieByIndex_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_GameManager_ShowEndUI_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_GameManager_ResetGame_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_GameManager_Start_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_GameManager_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie_PlayDeathEffect_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie_init_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie_TakeDamage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie_OnEnable_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie_CoChase_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie_CoDealDamage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie_FaceTarget_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie_Die_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie_CoFinishDeath_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie1_PlayDeathEffect_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie1_init_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie1_TakeDamage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie1_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie1_OnEnable_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie1_CoChase_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie1_CoDealDamage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie1_FaceTarget_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie1_Die_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie1_CoFinishDeath_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie2_PlayDeathEffect_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie2_init_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie2_TakeDamage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie2_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie2_OnEnable_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie2_CoChase_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie2_CoDealDamage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie2_FaceTarget_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie2_Die_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Zombie2_CoFinishDeath_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Monster_ResetMonster_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Monster_PlayDeathEffect_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Monster_TakeDamage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Monster_CheckPlayerInArea_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Monster_OnDrawGizmosSelected_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Monster_Start_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Monster_Die_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Monster_CoFinishDeath_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Player_PlayHitEffect_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Player_Heal_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Player_ResetHealth_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Player_AddExp_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Player_TakeDamage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Player_Attack_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Player_LevelUp_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Player_Update_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Player_Start_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_DevScene_UpdateLevelText_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_DevScene_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SoundManager_IsBgmPlaying_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SoundManager_StopOver_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SoundManager_Play3D_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SoundManager_StopBgm_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SoundManager_Clear_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SoundManager_Stop_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SoundManager_SetSoundVolume_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SoundManager_Play2D_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SoundManager_GetAudioClip_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SaveManager_StartAutoSave_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SaveManager_Load_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SaveManager_Reset_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SaveManager_StopAutoSave_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SaveManager_Delete_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SaveManager_Save_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SaveManager_CoAutoSave_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SaveManager_GameData_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_PoolManager_Reserve_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_PoolManager_Push_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_PoolManager_Pop_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_PoolManager_Clear_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_PoolManager_CreatePool_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_MagicShield_PlayShield_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_MagicShield_Update_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_MagicShield_AnimateShield_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_MagicShield_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ObjectManager_SpawnZombie_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ObjectManager_SpawnZombie1_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ObjectManager_SpawnZombie2_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ObjectManager_Despawn_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Inventory_Popup_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Pool_Push_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Pool_Pop_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Pool_OnCreate_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Pool_OnGet_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Pool_OnRelease_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Pool_OnDestroy_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Base_BindObjects_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Base_GetObject_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Base_BindTexts_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Base_GetImage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Base_BindImages_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Base_BindButtons_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Base_GetText_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Base_GetButton_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Base_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_DataManager_LoadData_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_DataManager_Validate_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ResourceManager_Destroy_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ResourceManager_ReleaseAll_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ResourceManager_Instantiate_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ResourceManager_LoadAll_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ResourcesLoader_Destroy_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ResourcesLoader_Instantiate_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ResourcesLoader_LoadAll_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Creature_Place_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Creature_TakeDamage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Creature_Update_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Creature_Start_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SceneManager_LoadNextScene_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SceneManager_IsLastStage_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_SaveManagerEditor_DeleteSaveFile_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Utils_FindChildGameObject_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Utils_GetRootTransform_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Stage1_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Stage2_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_Stage3_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_FollowCamera_LateUpdate_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_HealthBarBillboard_LateUpdate_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_HealthBarBillboard_Start_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_ObjectBase_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_BaseScene_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Popup_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "invoke_UI_Scene_Awake_group": {
+    "x": 20,
+    "y": 20
+  },
+  "call_Inventory_Popup_Awake_UI_Base_BindButtons": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Inventory_Popup_Awake_UI_Base_BindImages": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Inventory_Popup_Awake_UI_Base_GetButton": {
+    "x": 20,
+    "y": 140
+  },
+  "call_Inventory_Popup_Awake_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 180
+  },
+  "call_Inventory_Popup_Awake_SoundManager_Play2D": {
+    "x": 20,
+    "y": 340
+  },
+  "call_Inventory_Popup_Awake_Player_Heal": {
+    "x": 20,
+    "y": 260
+  },
+  "call_Inventory_Popup_Awake_UI_Base_GetImage": {
+    "x": 20,
+    "y": 300
+  },
+  "call_UI_DevScene_Awake_UI_Base_BindImages": {
+    "x": 20,
+    "y": 60
+  },
+  "call_UI_DevScene_Awake_UI_Base_BindButtons": {
+    "x": 20,
+    "y": 100
+  },
+  "call_UI_DevScene_Awake_UI_Base_BindTexts": {
+    "x": 20,
+    "y": 140
+  },
+  "call_UI_DevScene_Awake_UI_DevScene_UpdateLevelText": {
+    "x": 20,
+    "y": 180
+  },
+  "call_UI_DevScene_Awake_UI_Base_GetButton": {
+    "x": 20,
+    "y": 700
+  },
+  "call_UI_DevScene_Awake_SoundManager_Play2D": {
+    "x": 20,
+    "y": 660
+  },
+  "call_UI_DevScene_Awake_GameManager_StartGame": {
+    "x": 20,
+    "y": 380
+  },
+  "call_UI_DevScene_Awake_GameManager_GoToNextStage": {
+    "x": 20,
+    "y": 500
+  },
+  "call_UI_DevScene_Awake_GameManager_GoToStart": {
+    "x": 20,
+    "y": 620
+  },
+  "call_UI_DevScene_UpdateLevelText_UI_Base_GetText": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Monster_TakeDamage_Monster_Die": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Monster_Die_Monster_CoFinishDeath": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Monster_CoFinishDeath_GameManager_EndGame": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Player_Start_Player_ResetHealth": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Player_TakeDamage_SoundManager_Play2D": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Player_TakeDamage_GameManager_OnPlayerDied": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Player_Update_SoundManager_Play2D": {
+    "x": 20,
+    "y": 140
+  },
+  "call_Player_Update_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Player_Update_Player_Attack": {
+    "x": 20,
+    "y": 180
+  },
+  "call_Player_Attack_Player_TakeDamage": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Player_AddExp_Player_LevelUp": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Player_LevelUp_SoundManager_Play2D": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Player_LevelUp_UI_DevScene_UpdateLevelText": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie_OnEnable_Zombie_CoChase": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie_CoChase_Zombie_FaceTarget": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie_CoChase_Zombie_CoDealDamage": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie_CoDealDamage_Zombie_TakeDamage": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie_TakeDamage_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie_TakeDamage_SoundManager_Play2D": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie_TakeDamage_Zombie_Die": {
+    "x": 20,
+    "y": 140
+  },
+  "call_Zombie_Die_Player_AddExp": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie_Die_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie_Die_SoundManager_Play2D": {
+    "x": 20,
+    "y": 140
+  },
+  "call_Zombie_Die_Zombie_CoFinishDeath": {
+    "x": 20,
+    "y": 180
+  },
+  "call_Zombie_CoFinishDeath_GameManager_OnZombieDied": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie_CoFinishDeath_ObjectManager_Despawn": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie1_OnEnable_Zombie1_CoChase": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie1_CoChase_Zombie1_FaceTarget": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie1_CoChase_Zombie1_CoDealDamage": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie1_CoDealDamage_Zombie1_TakeDamage": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie1_TakeDamage_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie1_TakeDamage_SoundManager_Play2D": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie1_TakeDamage_Zombie1_Die": {
+    "x": 20,
+    "y": 140
+  },
+  "call_Zombie1_Die_Player_AddExp": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie1_Die_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie1_Die_SoundManager_Play2D": {
+    "x": 20,
+    "y": 140
+  },
+  "call_Zombie1_Die_Zombie1_CoFinishDeath": {
+    "x": 20,
+    "y": 180
+  },
+  "call_Zombie1_CoFinishDeath_GameManager_OnZombieDied": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie1_CoFinishDeath_ObjectManager_Despawn": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie2_OnEnable_Zombie2_CoChase": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie2_CoChase_Zombie2_FaceTarget": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie2_CoChase_Zombie2_CoDealDamage": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie2_CoDealDamage_Zombie2_TakeDamage": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie2_TakeDamage_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie2_TakeDamage_SoundManager_Play2D": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie2_TakeDamage_Zombie2_Die": {
+    "x": 20,
+    "y": 140
+  },
+  "call_Zombie2_Die_Player_AddExp": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie2_Die_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 100
+  },
+  "call_Zombie2_Die_SoundManager_Play2D": {
+    "x": 20,
+    "y": 140
+  },
+  "call_Zombie2_Die_Zombie2_CoFinishDeath": {
+    "x": 20,
+    "y": 180
+  },
+  "call_Zombie2_CoFinishDeath_GameManager_OnZombieDied": {
+    "x": 20,
+    "y": 60
+  },
+  "call_Zombie2_CoFinishDeath_ObjectManager_Despawn": {
+    "x": 20,
+    "y": 100
+  },
+  "call_SaveManagerEditor_DeleteSaveFile_SaveManager_Delete": {
+    "x": 20,
+    "y": 60
+  },
+  "call_DataManager_LoadData_DataManager_Validate": {
+    "x": 20,
+    "y": 60
+  },
+  "call_GameManager_StartGame_DataManager_LoadData": {
+    "x": 20,
+    "y": 60
+  },
+  "call_GameManager_StartGame_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 100
+  },
+  "call_GameManager_StartGame_SoundManager_IsBgmPlaying": {
+    "x": 20,
+    "y": 140
+  },
+  "call_GameManager_StartGame_SoundManager_Play2D": {
+    "x": 20,
+    "y": 180
+  },
+  "call_GameManager_StartGame_SaveManager_Load": {
+    "x": 20,
+    "y": 220
+  },
+  "call_GameManager_StartGame_SaveManager_StartAutoSave": {
+    "x": 20,
+    "y": 260
+  },
+  "call_GameManager_StartGame_GameManager_ResetGame": {
+    "x": 20,
+    "y": 300
+  },
+  "call_GameManager_StartGame_UI_DevScene_UpdateLevelText": {
+    "x": 20,
+    "y": 340
+  },
+  "call_GameManager_SpawnZombieByIndex_ObjectManager_SpawnZombie": {
+    "x": 20,
+    "y": 60
+  },
+  "call_GameManager_SpawnZombieByIndex_ObjectManager_SpawnZombie1": {
+    "x": 20,
+    "y": 100
+  },
+  "call_GameManager_SpawnZombieByIndex_ObjectManager_SpawnZombie2": {
+    "x": 20,
+    "y": 140
+  },
+  "call_GameManager_OnPlayerDied_SoundManager_StopBgm": {
+    "x": 20,
+    "y": 60
+  },
+  "call_GameManager_OnPlayerDied_SoundManager_Play2D": {
+    "x": 20,
+    "y": 100
+  },
+  "call_GameManager_OnZombieDied_GameManager_EndGame": {
+    "x": 20,
+    "y": 60
+  },
+  "call_GameManager_EndGame_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 60
+  },
+  "call_GameManager_EndGame_SoundManager_Play2D": {
+    "x": 20,
+    "y": 100
+  },
+  "call_GameManager_EndGame_GameManager_ShowEndUI": {
+    "x": 20,
+    "y": 140
+  },
+  "call_GameManager_GoToNextStage_SaveManager_StopAutoSave": {
+    "x": 20,
+    "y": 60
+  },
+  "call_GameManager_GoToNextStage_SaveManager_Save": {
+    "x": 20,
+    "y": 100
+  },
+  "call_GameManager_GoToNextStage_SceneManager_LoadNextScene": {
+    "x": 20,
+    "y": 140
+  },
+  "call_GameManager_ShowEndUI_SceneManager_IsLastStage": {
+    "x": 20,
+    "y": 60
+  },
+  "call_GameManager_ShowEndUI_SoundManager_StopBgm": {
+    "x": 20,
+    "y": 100
+  },
+  "call_GameManager_ShowEndUI_SoundManager_Play2D": {
+    "x": 20,
+    "y": 140
+  },
+  "call_GameManager_ResetGame_Player_ResetHealth": {
+    "x": 20,
+    "y": 60
+  },
+  "call_GameManager_ResetGame_ObjectManager_Despawn": {
+    "x": 20,
+    "y": 100
+  },
+  "call_GameManager_ResetGame_GameManager_SpawnZombieByIndex": {
+    "x": 20,
+    "y": 140
+  },
+  "call_GameManager_ResetGame_Creature_Place": {
+    "x": 20,
+    "y": 180
+  },
+  "call_GameManager_ResetGame_SoundManager_Stop": {
+    "x": 20,
+    "y": 220
+  },
+  "call_GameManager_GoToStart_GameManager_ResetGame": {
+    "x": 20,
+    "y": 60
+  },
+  "call_GameManager_GoToStart_SoundManager_StopOver": {
+    "x": 20,
+    "y": 100
+  },
+  "call_PoolManager_Reserve_PoolManager_CreatePool": {
+    "x": 20,
+    "y": 60
+  },
+  "call_PoolManager_Pop_PoolManager_CreatePool": {
+    "x": 20,
+    "y": 60
+  },
+  "call_SaveManager_StartAutoSave_SaveManager_StopAutoSave": {
+    "x": 20,
+    "y": 60
+  },
+  "call_SaveManager_StartAutoSave_SaveManager_CoAutoSave": {
+    "x": 20,
+    "y": 100
+  },
+  "call_SaveManager_CoAutoSave_SaveManager_Save": {
+    "x": 20,
+    "y": 60
+  },
+  "call_SaveManager_Load_SaveManager_Reset": {
+    "x": 20,
+    "y": 60
+  },
+  "call_SaveManager_Reset_SaveManager_GameData": {
+    "x": 20,
+    "y": 60
+  },
+  "call_SaveManager_Reset_SaveManager_Save": {
+    "x": 20,
+    "y": 100
+  },
+  "call_SoundManager_Play2D_SoundManager_GetAudioClip": {
+    "x": 20,
+    "y": 60
+  },
+  "call_SoundManager_Play2D_SoundManager_Stop": {
+    "x": 20,
+    "y": 100
+  },
+  "call_SoundManager_Play3D_SoundManager_GetAudioClip": {
+    "x": 20,
+    "y": 60
+  },
+  "call_SoundManager_Clear_SoundManager_Stop": {
+    "x": 20,
+    "y": 60
+  },
+  "call_SoundManager_StopBgm_SoundManager_Stop": {
+    "x": 20,
+    "y": 60
+  },
+  "call_SoundManager_StopOver_SoundManager_Stop": {
+    "x": 20,
+    "y": 60
+  },
+  "call_MagicShield_Update_SoundManager_SetSoundVolume": {
+    "x": 20,
+    "y": 60
+  },
+  "call_MagicShield_Update_SoundManager_Play2D": {
+    "x": 20,
+    "y": 100
+  },
+  "call_MagicShield_Update_MagicShield_PlayShield": {
+    "x": 20,
+    "y": 140
+  },
+  "call_MagicShield_PlayShield_MagicShield_AnimateShield": {
+    "x": 20,
+    "y": 100
+  }
+}
