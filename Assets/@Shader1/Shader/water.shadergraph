@@ -1844,7 +1844,7 @@
     "m_Title": "Water Refraction",
     "m_Position": {
         "x": -776.5,
-        "y": 1263.0
+        "y": 1262.9998779296875
     }
 }
 
@@ -1932,7 +1932,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "_Distance",
     "m_StageCapability": 2,
-    "m_Value": 0.0,
+    "m_Value": 0.029999999329447748,
     "m_DefaultValue": 0.0,
     "m_Labels": [],
     "m_LiteralMode": false
@@ -3493,7 +3493,7 @@
     "m_Title": "WaterColor",
     "m_Position": {
         "x": -776.5,
-        "y": 2.0
+        "y": 1.9998779296875
     }
 }
 
@@ -4402,7 +4402,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Strength",
     "m_StageCapability": 3,
-    "m_Value": 0.5,
+    "m_Value": 1.0,
     "m_DefaultValue": 1.0,
     "m_Labels": [],
     "m_LiteralMode": false
@@ -4527,8 +4527,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1704.0,
-            "y": -683.4998779296875,
+            "x": 1703.0001220703125,
+            "y": -683.0,
             "width": 208.0,
             "height": 302.0
         }
@@ -5618,10 +5618,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 2011.5,
-            "y": 919.9999389648438,
+            "x": 2060.5,
+            "y": 1059.5,
             "width": 227.5,
-            "height": 279.00006103515627
+            "height": 279.0
         }
     },
     "m_Slots": [
@@ -5897,7 +5897,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Scale",
     "m_StageCapability": 3,
-    "m_Value": 10.0,
+    "m_Value": 5.0,
     "m_DefaultValue": 10.0,
     "m_Labels": [],
     "m_LiteralMode": false
@@ -8458,7 +8458,7 @@
     "m_Title": "Water Normal",
     "m_Position": {
         "x": -253.5,
-        "y": -1203.0
+        "y": -1203.0001220703125
     }
 }
 
