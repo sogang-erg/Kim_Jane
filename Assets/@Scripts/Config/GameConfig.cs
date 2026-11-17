@@ -4,7 +4,6 @@ using UnityEngine;
 public class GameConfig : ScriptableObject
 {
     [Header("Game Settings")] // 헤더에 게임 설정 섹션을 표시
-
     [Min(500)] // 최솟값 설정
     [SerializeField] // 인스펙터에 표시되도록 설정
     private int initialEXP = 0;
